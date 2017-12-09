@@ -13,6 +13,7 @@ install:
     - cargo build --package nvpair-sys --verbose
     - cargo build --package nvpair --verbose
 script:
+    - find / -name libnvpair\*
     - cargo build --package nvpair-sys --verbose; cargo test --package nvpair-sys --verbose
     - cargo build --package nvpair --verbose; cargo test --package nvpair --verbose
 cache: cargo
